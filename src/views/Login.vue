@@ -6,6 +6,7 @@
         <h2>
             Login
         </h2>
+        <b-alert show v-if="error">A conta informada não existe</b-alert>
         <b-card-text align="left">
             Endereço de email:
         </b-card-text>
@@ -16,7 +17,7 @@
         </b-card-text>
         <b-form-input v-model="senha" type="password"></b-form-input>
         <br>
-        <b-button class="login-button" variant="dark">Entrar</b-button>
+        <b-button class="login-button" variant="dark" @click="clique">Entrar</b-button>
         <!--<div class="mt-2">Values: <br>
             {{ email }}<br>
             {{ senha }}</div>-->
@@ -26,11 +27,27 @@
 
 
 <script>
+    import router from '../router';
+
     export default {
         data() {
             return {
                 email: '',
                 senha: '',
+                error: false,
+            }
+        },
+        methods: {
+            clique() {
+                if (this.email != 'admin' || this.senha != 'admin')
+                {
+                    this.error=true;
+                }
+                else
+                {
+                    this.error=false;
+                    router.push('/sales');
+                }
             }
         }
     }
