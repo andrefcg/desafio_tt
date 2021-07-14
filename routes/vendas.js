@@ -1,10 +1,10 @@
 async function routes(fastify, options) {
     fastify.get('/', async (req, reply) => {
-        const client = await fastify.pg.connect()
-        const { rows } = await client.query(
+        //const client = await fastify.pg.connect()
+        const { rows } = await client.pg.query(
             'SELECT * FROM metas', 
         )
-        client.release()
+        //client.release()
         return rows;
     })
 }

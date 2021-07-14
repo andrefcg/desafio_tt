@@ -9,7 +9,7 @@
         </h3>
         
         <div class="sales-main d-flex flex-column justify-content-center align-items-center">
-            <img class="TT-logo" src="../assets/logo_TT_black.png">
+            <img class="tt-logo" src="../assets/logo_TT_black.png">
             <br>
             <h3>
                 <strong>Acompanhamento de Vendas</strong>
@@ -99,7 +99,7 @@
     .sales-main, .main {
         height: calc(100vh - 5rem);
     }
-    .TT-logo {
+    .tt-logo {
         width: 20rem;
         max-width: 80vw;
     }

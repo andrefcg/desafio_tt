@@ -1,6 +1,6 @@
 <template>
   <div class="login d-flex flex-column justify-content-center align-items-center">
-    <img class="TT-logo" alt="TT logo" src="../assets/logo_tt.png">
+    <img class="tt-logo" alt="TT logo" src="../assets/logo_tt.png">
     <br>
     <b-card class="login-box">
         <h2>
@@ -27,8 +27,6 @@
 
 
 <script>
-    import router from '../router';
-
     export default {
         data() {
             return {
@@ -46,7 +44,7 @@
                 else
                 {
                     this.error=false;
-                    router.push('/sales');
+                    this.$router.push('/vendas');
                 }
             }
         }
@@ -71,7 +69,7 @@
     width: 100%;
 }
 
-.TT-logo {
+.tt-logo {
     width: 12rem;
 }
 </style>

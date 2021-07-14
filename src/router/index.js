@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Login from '../views/Login.vue'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Sales from '../views/Sales.vue'
+import Vendas from '../views/Vendas.vue'
 
 Vue.use(VueRouter)
 
@@ -24,9 +24,9 @@ const routes = [
         component: About,
     },
     {
-        path: '/sales',
-        name: 'Sales',
-        component: Sales,
+        path: '/vendas',
+        name: 'Vendas',
+        component: Vendas,
     },
     // {
     //     path: '/about',
