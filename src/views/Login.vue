@@ -1,6 +1,6 @@
 <template>
   <div class="login d-flex flex-column justify-content-center align-items-center">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img class="TT-logo" alt="TT logo" src="../assets/logo_tt.png">
     <br>
     <b-card class="login-box">
         <h2>
@@ -69,5 +69,9 @@
 
 .login-button {
     width: 100%;
+}
+
+.TT-logo {
+    width: 12rem;
 }
 </style>

@@ -1,25 +1,31 @@
 <template>
-  <div id="app">
-    
-    <div id="nav">
-      <router-link to="/">Login</router-link> |
-      <router-link to="/sales">Sales</router-link> |
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <!-- 
+        <div id="nav">
+        <router-link to="/">Login</router-link> |
+        <router-link to="/sales">Sales</router-link> |
+        <router-link to="/home">Home</router-link> |
+        <router-link to="/about">About</router-link>
+        </div>
+        -->
+        <router-view />
     </div>
-    <!-- -->
-    <router-view />
-  </div>
 </template>
 
 <style>
+@font-face {
+    font-family: Brothers;
+    src: url('./assets/Brothers Regular.otf');
+}
+
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: Brothers, Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
     height: 100vh;
+    width: 100vw;
 }
 
 #nav {
@@ -38,5 +44,6 @@
 html, body
 {
     height: 100vh;
+    width: 100vw;
 }
 </style>
