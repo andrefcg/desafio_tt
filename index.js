@@ -10,15 +10,7 @@ fastify.register(require('fastify-postgres'), {
     port: 5432,
 })
 
-//fastify.register(require('./route-1'))
-fastify.get('/vendas', async (req, reply) => {
-    const client = await fastify.pg.connect()
-    const { rows } = await client.query(
-        'SELECT * FROM metas', 
-    )
-    client.release()
-    return rows
-})
+fastify.register(require('./routes/vendas'),{prefix:'vendas'})
 
 fastify.listen(3000, function (err, address) {
     if (err) {
