@@ -1,18 +1,6 @@
 async function routes(fastify, options) {
     fastify.get('/', async (req, reply) => {
-        //const client = await fastify.pg.connect()
         const { rows } = await fastify.pg.query(
-            /*`SELECT metas.loja, SUM(vendas.valor_efetivo) AS venda, metas.meta_valor, metas.meta_tckt_medio,
-            SUM(CASE WHEN venda_produtos.grupo<>'RETIRADA/SUBST'
-                THEN venda_produtos.quantidade ELSE 0 END) AS produto_total,
-            SUM(CASE WHEN venda_produtos.grupo='BURGER'
-                THEN venda_produtos.quantidade ELSE 0 END) AS cliente_total
-            FROM metas 
-            LEFT JOIN vendas ON metas.loja=vendas.loja 
-            AND vendas.cancelada = 'f'
-            LEFT JOIN venda_produtos ON metas.loja=venda_produtos.loja
-            GROUP BY metas.loja, metas.meta_valor, metas.meta_tckt_medio`, */
-
             `WITH t1 AS (
                 SELECT SUM(valor_efetivo) AS venda, loja
                 FROM vendas
@@ -57,7 +45,6 @@ async function routes(fastify, options) {
             SELECT * FROM t5`,
         )
 
-        //client.release()
         return rows;
     })
 }
