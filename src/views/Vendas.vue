@@ -1,7 +1,7 @@
 <template>
     <div class="main">
         <b-navbar toggleable="lg" type="dark" variant="dark">
-            <b-navbar-brand class='f-brother' href="javascript:void(0)">T.T. Burger</b-navbar-brand>
+            <b-navbar-brand class="f-brother" href="javascript:void(0)">T.T. Burger</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -19,7 +19,7 @@
             <img class="tt-logo" src="../assets/logo_TT_black.png">
             <br>
             <h3>
-                <strong class='f-brother'>Acompanhamento de Vendas</strong>
+                <strong class="f-brother">Acompanhamento de Vendas</strong>
             </h3>
             <b-table class='table d-none d-lg-block' striped bordered responsive sticky-header hover 
             head-variant="dark" :items="items" :fields="fields">
@@ -46,7 +46,7 @@
                     <strong class='cell-loja'>{{ data.value }}</strong>
                 </template>
                 <template #cell()="data">
-                    <strong><div v-html=data.value></div></strong>
+                    <strong><div v-html="data.value"></div></strong>
                 </template>
             </b-table>
             <font-awesome-icon icon="arrow-down" :style="{ color: 'red', display:'none'}"/>
