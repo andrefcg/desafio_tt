@@ -1,6 +1,12 @@
+const path = require('path');
 const fastify = require('fastify')({
     logger: false
 })
+
+fastify.register(require('fastify-static'), { 
+    root: path.join(__dirname, 'dist'), 
+    prefix: '/', 
+});
 
 fastify.register(require('fastify-postgres'), {
     user: process.env.USUARIO_POSTGRES,
@@ -11,6 +17,10 @@ fastify.register(require('fastify-postgres'), {
 })
 
 fastify.register(require('./routes/vendas'),{prefix:'vendas'})
+
+fastify.get('/', (req, reply) => { 
+    return reply.sendFile('index.html'); 
+});
 
 fastify.listen(3000, function (err, address) {
     if (err) {
