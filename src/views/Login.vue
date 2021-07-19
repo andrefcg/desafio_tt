@@ -18,9 +18,6 @@
         <b-form-input v-model="senha" type="password"></b-form-input>
         <br>
         <b-button class="login-button" variant="dark" @click="clique">Entrar</b-button>
-        <!--<div class="mt-2">Values: <br>
-            {{ email }}<br>
-            {{ senha }}</div>-->
     </b-card>
   </div>
 </template>
@@ -37,7 +34,7 @@
         },
         methods: {
             clique() {
-                if (this.email != 'admin' || this.senha != 'admin')
+                if (this.email != 'adm' || this.senha != 'adm')
                 {
                     this.error=true;
                 }
