@@ -5,12 +5,12 @@
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-            <b-collapse id="nav-collapse" is-nav>
+            <b-collapse id="nav-collapse" class='tt-nav' is-nav>
                 <b-navbar-nav>
-                    <b-nav-item href="#" disabled>Início</b-nav-item>
+                    <b-nav-item href="#" disabled><strong>Início</strong></b-nav-item>
                 </b-navbar-nav>
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-item to="/">Logout</b-nav-item>
+                    <b-nav-item to="/"><strong>Logout</strong></b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -211,6 +211,9 @@
 </script>
 
 <style>
+    .tt-nav {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
     .sales-main, .main {
         height: calc(100vh - 56px);
     }
