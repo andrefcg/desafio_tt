@@ -50,7 +50,7 @@
 
 <style scoped>
 .login {
-    
+    font-family: Brothers,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: black;
     min-height: 100vh;
 }

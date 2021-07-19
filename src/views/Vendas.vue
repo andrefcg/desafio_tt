@@ -1,13 +1,13 @@
 <template>
     <div class="main">
         <b-navbar toggleable="lg" type="dark" variant="dark">
-            <b-navbar-brand href="#">T.T. Burger</b-navbar-brand>
+            <b-navbar-brand class='f-brother' href="javascript:void(0)">T.T. Burger</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-            <b-collapse id="nav-collapse" class='tt-nav' is-nav>
+            <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
-                    <b-nav-item href="#" disabled><strong>Início</strong></b-nav-item>
+                    <b-nav-item href="javascript:void(0)"><strong>Início</strong></b-nav-item>
                 </b-navbar-nav>
                 <b-navbar-nav class="ml-auto">
                     <b-nav-item to="/"><strong>Logout</strong></b-nav-item>
@@ -19,7 +19,7 @@
             <img class="tt-logo" src="../assets/logo_TT_black.png">
             <br>
             <h3>
-                <strong>Acompanhamento de Vendas</strong>
+                <strong class='f-brother'>Acompanhamento de Vendas</strong>
             </h3>
             <b-table class='table d-none d-lg-block' striped bordered responsive sticky-header hover 
             head-variant="dark" :items="items" :fields="fields">
@@ -211,8 +211,8 @@
 </script>
 
 <style>
-    .tt-nav {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    .f-brother {
+        font-family: Brothers,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     .sales-main, .main {
         height: calc(100vh - 56px);
@@ -226,7 +226,6 @@
     .table {
         max-width: 63rem;
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     .datepick {
         width: 8rem;
