@@ -1,19 +1,15 @@
-# test_vue
+# Desafio TT
 
-## Project setup
-```
-npm install
-```
+## Setup do Projeto
+1. clonar o repositorio
+2. configurar as variaveis de ambiente
+3. dar npm install
+4. npm start
+5. http://localhost:3000
 
-### Compiles and hot-reloads for development
+## Link do site em produção
+https://desafiott.herokuapp.com/
 ```
-npm run serve
+usuario: adm
+senha: adm
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
