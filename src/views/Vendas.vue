@@ -32,7 +32,7 @@
                     <strong class='cell-loja'>{{ data.value }}</strong>
                 </template>
                 <template #cell()="data">
-                    <strong><div v-html=data.value></div></strong>
+                    <strong><div v-html="data.value"></div></strong>
                 </template>
             </b-table>
             <b-table class='table d-lg-none' striped bordered responsive sticky-header hover 
