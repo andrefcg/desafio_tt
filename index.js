@@ -22,7 +22,7 @@ fastify.get('/', (req, reply) => {
     return reply.sendFile('index.html'); 
 });
 
-fastify.listen(process.env.NODE_ENV === 'production' ? 80 : 3000, '0.0.0.0', function (err, address) {
+fastify.listen(process.env.PORT  || 3000, '0.0.0.0', function (err, address) {
     if (err) {
         fastify.log.error(err)
         process.exit(1)
