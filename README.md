@@ -1,19 +1,8 @@
-# test_vue
+# Desafio TT
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Setup do Projeto
+1. clonar o repositorio
+2. configurar as variaveis de ambiente
+3. dar npm install
+4. npm start
+5. http://localhost:3000
