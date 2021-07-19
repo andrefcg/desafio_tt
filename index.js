@@ -8,13 +8,22 @@ fastify.register(require('fastify-static'), {
     prefix: '/', 
 });
 
-fastify.register(require('fastify-postgres'), {
-    user: process.env.USUARIO_POSTGRES,
-    host: process.env.HOST_POSTGRES,
-    database: process.env.DATABASE_POSTGRES,
-    password: process.env.SENHA_POSTGRES,
-    port: 5432,
-})
+let pg_options= {
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
+};
+if (process.env.DATABASE_URL == null)
+    pg_options= {
+        user: process.env.USUARIO_POSTGRES,
+        host: process.env.HOST_POSTGRES,
+        database: process.env.DATABASE_POSTGRES,
+        password: process.env.SENHA_POSTGRES,
+        port: 5432
+    }
+
+fastify.register(require('fastify-postgres'), pg_options)
 
 fastify.register(require('./routes/vendas'),{prefix:'vendas'})
 
