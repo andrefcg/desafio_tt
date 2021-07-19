@@ -8,4 +8,6 @@
 5. http://localhost:3000
 
 ## Link do site em produção
-https://desafiott.herokuapp.com/#/
+https://desafiott.herokuapp.com/
+usuario: adm
+senha: adm
